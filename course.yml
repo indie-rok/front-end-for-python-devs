@@ -48,7 +48,13 @@ units:
         kind: PUBLICATION_REVIEWED
         workload: 240
         publish: 2023-10-09
-      - name: Supplemental Reading
+      - name: "Supplemental Reading: The Modern JS Tutorial"
+        path: src/supplemental-reading-modern-js.md
+        type: lesson
+        kind: PUBLICATION_REVIEWED
+        workload: 240
+        publish: 2023-10-09
+      - name: "Supplemental Reading: YDK JS"
         path: src/supplemental-reading.md
         type: lesson
         kind: PUBLICATION_REVIEWED
@@ -67,6 +73,12 @@ units:
         type: lesson
         kind: GENERAL
         workload: 30
+        publish: 2023-10-09
+      - name: Web Development Resources
+        path: src/lessons/javascript-review/web-development-resources.md
+        type: lesson
+        kind: GENERAL
+        workload: 90
         publish: 2023-10-09
       - name: JavaScript Intro
         path: src/lessons/javascript-review/javascript-intro.md
@@ -360,6 +372,11 @@ units:
         kind: GENERAL
         workload: 120
         publish: 2023-10-30
+      - name: React Tutorial
+        path: src/lessons/introduction-to-react/react-tutorial.md
+        type: lesson
+        kind: GENERAL
+        workload: 120
       - name: Creating a React Project
         path: src/lessons/introduction-to-react/intro-to-react/creating-a-react-project.md
         type: lesson
@@ -414,6 +431,12 @@ units:
         publish: 2023-11-06
       - name: How to Think in React
         path: src/lessons/thinking-in-react/how-to-think-in-react.md
+        type: lesson
+        kind: GENERAL
+        workload: 120
+        publish: 2023-11-06
+      - name: "React Documentation: Thinking in React"
+        path: src/lessons/thinking-in-react/thinking-in-react.md
         type: lesson
         kind: GENERAL
         workload: 120
@@ -664,6 +687,12 @@ units:
     activities:
       - name: Introduction
         path: src/lessons/application.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2023-12-04
+      - name: React File Structure
+        path: src/lessons/react-file-structure.md
         type: lesson
         kind: GENERAL
         workload: 30
