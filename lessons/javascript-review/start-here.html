@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Start Here - front-end-for-python-developers</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../course-overview.html"><strong aria-hidden="true">1.</strong> Course Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../video-lessons.html"><strong aria-hidden="true">1.1.</strong> Live Classes</a></li><li class="chapter-item expanded "><a href="../../core-reading.html"><strong aria-hidden="true">1.2.</strong> Core Reading</a></li><li class="chapter-item expanded "><a href="../../supplemental-reading.html"><strong aria-hidden="true">1.3.</strong> Supplemental Reading</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review.html"><strong aria-hidden="true">2.</strong> JavaScript Review</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/javascript-review/start-here.html" class="active"><strong aria-hidden="true">2.1.</strong> Start Here</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro.html"><strong aria-hidden="true">2.2.</strong> JavaScript Intro</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/information-type-and-operations.html"><strong aria-hidden="true">2.3.</strong> Information Types and Operations</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/variables.html"><strong aria-hidden="true">2.4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/exercises-variable-types-and-operations.html"><strong aria-hidden="true">2.5.</strong> Week 1 Exercises - Variables, Types, and Operations</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/conditionals.html"><strong aria-hidden="true">2.6.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/loops.html"><strong aria-hidden="true">2.7.</strong> Loops</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/functions.html"><strong aria-hidden="true">2.8.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/complex-data-structures-array-objects.html"><strong aria-hidden="true">2.9.</strong> Complex Data Structures (Array-Objects)</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/exercises-loop-conditionals-functions.html"><strong aria-hidden="true">2.10.</strong> Exercises - Loop, Conditionals, and Functions</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/bonus-clarifying-es6-es2015-etc.html"><strong aria-hidden="true">2.11.</strong> BONUS - Clarifying ES6, ES2015, etc</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/javascript-intro/javascript-questions.html"><strong aria-hidden="true">2.12.</strong> JavaScript Questions</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom.html"><strong aria-hidden="true">2.13.</strong> DOM</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/what-is-the-dom.html"><strong aria-hidden="true">2.14.</strong> What is the DOM?</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/node-types.html"><strong aria-hidden="true">2.15.</strong> Node Types</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/selecting-elements.html"><strong aria-hidden="true">2.16.</strong> Selecting Elements</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/updating-elements.html"><strong aria-hidden="true">2.17.</strong> Updating Elements</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/inserting-elements.html"><strong aria-hidden="true">2.18.</strong> Inserting Elements</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/deleting-elements.html"><strong aria-hidden="true">2.19.</strong> Deleting Elements</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/exercises.html"><strong aria-hidden="true">2.20.</strong> Exercises - DOM</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/dom/questions-about-dom.html"><strong aria-hidden="true">2.21.</strong> Questions about DOM</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/events.html"><strong aria-hidden="true">2.22.</strong> Events</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/events/what-is-an-event.html"><strong aria-hidden="true">2.23.</strong> What is an Event?</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/events/types-of-events.html"><strong aria-hidden="true">2.24.</strong> Types of Events</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/events/accessing-to-the-event-information.html"><strong aria-hidden="true">2.25.</strong> Accessing Event Information</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/events/exercises.html"><strong aria-hidden="true">2.26.</strong> Exercises - Events</a></li><li class="chapter-item expanded "><a href="../../lessons/javascript-review/project.html"><strong aria-hidden="true">2.27.</strong> Week 1 Assignment - Trivia Game</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/development-best-practices.html"><strong aria-hidden="true">3.</strong> Development Best Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/development-best-practices/javascript-modules.html"><strong aria-hidden="true">3.1.</strong> JavaScript Modules</a></li><li class="chapter-item expanded "><a href="../../lessons/development-best-practices/gh-pages-deploy.html"><strong aria-hidden="true">3.2.</strong> GitHub Pages Deploy</a></li><li class="chapter-item expanded "><a href="../../lessons/development-best-practices/writing-unit-tests.html"><strong aria-hidden="true">3.3.</strong> Writing Unit Tests</a></li><li class="chapter-item expanded "><a href="../../lessons/development-best-practices/project.html"><strong aria-hidden="true">3.4.</strong> Week 2 Assignment - Encrypt & Decrypt</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript.html"><strong aria-hidden="true">4.</strong> Advanced Javascript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/advanced-array-methods-1.html"><strong aria-hidden="true">4.1.</strong> Advanced Array Methods 1</a></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/advanced-array-methods-2.html"><strong aria-hidden="true">4.2.</strong> Advanced Array Methods 2</a></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/exercises.html"><strong aria-hidden="true">4.3.</strong> Week 3 Exercises - Advanced Array Methods</a></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/flexbox.html"><strong aria-hidden="true">4.4.</strong> Flexbox</a></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/collaborative-github.html"><strong aria-hidden="true">4.5.</strong> Collaborative Github</a></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/json-and-xml.html"><strong aria-hidden="true">4.6.</strong> JSON and XML</a></li><li class="chapter-item expanded "><a href="../../lessons/advanced-javascript/project-covid-19-data-dashboard.html"><strong aria-hidden="true">4.7.</strong> Week 3 Assignment - Covid-19 Dashboard</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react.html"><strong aria-hidden="true">5.</strong> React Fundamentals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/why-react.html"><strong aria-hidden="true">5.1.</strong> Why React</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/why-react/what-is-a-spa.html"><strong aria-hidden="true">5.2.</strong> What is a SPA?</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/why-react/benefits-disadvantages-of-spas.html"><strong aria-hidden="true">5.3.</strong> Benefits and Disadvantages of SPAs?</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/why-react/why-react-are-there-other-tools.html"><strong aria-hidden="true">5.4.</strong> Why React? Are there other tools?</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react.html"><strong aria-hidden="true">5.5.</strong> Introduction to React</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/what-is-react.html"><strong aria-hidden="true">5.6.</strong> What is React?</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/creating-a-react-project.html"><strong aria-hidden="true">5.7.</strong> Creating a React Project</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/our-first-component.html"><strong aria-hidden="true">5.8.</strong> Our First Component</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/what-is-jsx.html"><strong aria-hidden="true">5.9.</strong> What is JSX?</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/css-and-react.html"><strong aria-hidden="true">5.10.</strong> CSS and React</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/react-and-events.html"><strong aria-hidden="true">5.11.</strong> React and Events</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/intro-to-react/intro-to-component-lifecycle.html"><strong aria-hidden="true">5.12.</strong> Introduction to the Component Lifecycle</a></li><li class="chapter-item expanded "><a href="../../lessons/introduction-to-react/project.html"><strong aria-hidden="true">5.13.</strong> Week 4 Assignment - Weather Dashboard</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react.html"><strong aria-hidden="true">6.</strong> Thinking in React</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/how-to-think-in-react.html"><strong aria-hidden="true">6.1.</strong> How to Think in React</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/class-and-functional-components.html"><strong aria-hidden="true">6.2.</strong> Class and Functional Components</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/props.html"><strong aria-hidden="true">6.3.</strong> Props</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/state.html"><strong aria-hidden="true">6.4.</strong> State</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/usestate.html"><strong aria-hidden="true">6.5.</strong> useState</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/components-lifecycle.html"><strong aria-hidden="true">6.6.</strong> Components Lifecycle</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/useeffect.html"><strong aria-hidden="true">6.7.</strong> useEffect</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/rendering-lists.html"><strong aria-hidden="true">6.8.</strong> Rendering Lists</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/react-hooks-intro.html"><strong aria-hidden="true">6.9.</strong> React Hooks Introduction</a></li><li class="chapter-item expanded "><a href="../../lessons/thinking-in-react/project.html"><strong aria-hidden="true">6.10.</strong> Week 5 Assignment - Covid Dashboard using React</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript.html"><strong aria-hidden="true">7.</strong> Asynchronous JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/intro-to-asynchronous-programming.html"><strong aria-hidden="true">7.1.</strong> Introduction to Asynchronous Programming</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/syncronous-vs-asyncronous.html"><strong aria-hidden="true">7.2.</strong> Synchronous vs Asynchronous</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/callbacks.html"><strong aria-hidden="true">7.3.</strong> Callbacks</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/promises.html"><strong aria-hidden="true">7.4.</strong> Promises</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/async-await.html"><strong aria-hidden="true">7.5.</strong> Async and Await</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/calling-apis.html"><strong aria-hidden="true">7.6.</strong> Calling APIs</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/browser-apis.html"><strong aria-hidden="true">7.7.</strong> Browser APIs</a></li><li class="chapter-item expanded "><a href="../../lessons/asynchronous-javascript/project.html"><strong aria-hidden="true">7.8.</strong> Week 6 Assignment - Pokedex</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/state-management.html"><strong aria-hidden="true">8.</strong> Routing and State management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/state-management/react-router.html"><strong aria-hidden="true">8.1.</strong> React Router</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/react-router/what-is-react-router.html"><strong aria-hidden="true">8.2.</strong> What is React Router?</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/react-router/react-router-exercise.html"><strong aria-hidden="true">8.3.</strong> Exercise (React Router)</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment.html"><strong aria-hidden="true">8.4.</strong> Advanced State Management</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/state-management-is-hard.html"><strong aria-hidden="true">8.5.</strong> State Management is Hard</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/global-state.html"><strong aria-hidden="true">8.6.</strong> Global State</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/react-context.html"><strong aria-hidden="true">8.7.</strong> React Context</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/react-query.html"><strong aria-hidden="true">8.8.</strong> React Query</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/usereducer.html"><strong aria-hidden="true">8.9.</strong> useReducer</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/other-global-state-libraries.html"><strong aria-hidden="true">8.10.</strong> Other Global State Libraries</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/advanced-state-managment/state-in-url.html"><strong aria-hidden="true">8.11.</strong> State in URLs</a></li><li class="chapter-item expanded "><a href="../../lessons/state-management/project.html"><strong aria-hidden="true">8.12.</strong> Week 7 Assignment - Pokedex with React Query</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react.html"><strong aria-hidden="true">9.</strong> JWT, Auth, and React</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react/auth-flows-intro.html"><strong aria-hidden="true">9.1.</strong> Introduction to Auth Flows</a></li><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react/what-is-jwt.html"><strong aria-hidden="true">9.2.</strong> What is JWT</a></li><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react/protected-routes.html"><strong aria-hidden="true">9.3.</strong> Protected Routes</a></li><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react/jwt-and-react.html"><strong aria-hidden="true">9.4.</strong> JWT, Auth, and React</a></li><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react/exercise.html"><strong aria-hidden="true">9.5.</strong> Exercise</a></li><li class="chapter-item expanded "><a href="../../lessons/jwt-and-react/project.html"><strong aria-hidden="true">9.6.</strong> Week 8 Assignment - Pokedex with Authentication</a></li></ol></li><li class="chapter-item expanded "><a href="../../lessons/application.html"><strong aria-hidden="true">10.</strong> Applying What You've Learned</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lessons/final-project.html"><strong aria-hidden="true">10.1.</strong> Week 9 Final Project - Travel Planner</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">front-end-for-python-developers</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Let's start by distinguishing between these three languages, how they look like, and what they do.</p>
+<h2 id="what-are-html-css-and-js"><a class="header" href="#what-are-html-css-and-js">What are HTML, CSS, and JS?</a></h2>
+<p><img src="./what-is-html-css-and-js.png" alt="What is HTML, CSS, and JS?" /></p>
+<p>So in summary:</p>
+<ul>
+<li>HTML gives structure to a website. (like what would be the order of an element)</li>
+<li>CSS makes it pretty (like the color of my elements)</li>
+<li>JS makes it interactive (what happens if I click a button)</li>
+</ul>
+<h2 id="why-learn-javascript"><a class="header" href="#why-learn-javascript">Why Learn JavaScript?</a></h2>
+<p>Although this course is focused on web applications, many of the principles can be used for other platforms. JavaScript is a very powerful programming language that, with the right tools, could allow you to create <a href="https://reactnative.dev/">mobile apps</a>, <a href="https://www.electronjs.org/es/">desktop apps</a>, <a href="https://www.bouvet.no/bouvet-deler/utbrudd/learning-javascript-and-arduino-programming-with-johnny-five">program robots</a> or <a href="https://expressjs.com/">create powerful back ends</a>. </p>
+<p>Not to mention it's <a href="https://www.devjobsscanner.com/blog/top-8-most-demanded-languages-in-2022/">one of the most</a> demanded programming languages for professional job opportunities and it's easy-to-learn syntax, it was the obvious choice when choosing a programming language for writing web applications. Even with interesting alternatives like <a href="https://dart.dev/">Dart</a> or <a href="https://webassembly.org/">Web Assembly</a>, JavaScript is still the number one choice for everything related to front end programming.</p>
+<h2 id="can-i-use-my-python-knowledge-in-javascript"><a class="header" href="#can-i-use-my-python-knowledge-in-javascript">Can I Use My Python knowledge in JavaScript</a></h2>
+<p>Yes, in the next lessons, we will cover the basics of javascript, but keep the following page bookmarked, because many of the concepts we will see, probably you've already seen while learning Python.</p>
+<h3 id="1-data-types-primitives"><a class="header" href="#1-data-types-primitives">1. Data Types (primitives)</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>Integer</td><td>x = 5</td><td>Number</td><td>let x = 5;</td></tr>
+<tr><td>Float</td><td>y = 3.14</td><td>Number</td><td>let y = 3.14;</td></tr>
+<tr><td>String</td><td>s = 'hello'</td><td>String</td><td>let s = 'hello';</td></tr>
+<tr><td>Boolean</td><td>b = True</td><td>Boolean</td><td>let b = true;</td></tr>
+</tbody></table>
+</div>
+<h3 id="2-data-operations"><a class="header" href="#2-data-operations">2. Data operations</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>Addition</td><td>result = x + y</td><td>Addition</td><td>let result = x + y;</td></tr>
+<tr><td>Subtraction</td><td>result = x - y</td><td>Subtraction</td><td>let result = x - y;</td></tr>
+<tr><td>Multiplication</td><td>result = x * y</td><td>Multiplication</td><td>let result = x * y;</td></tr>
+<tr><td>Division</td><td>result = x / y</td><td>Division</td><td>let result = x / y;</td></tr>
+</tbody></table>
+</div>
+<h3 id="3-variables"><a class="header" href="#3-variables">3. Variables</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>Variable assignment</td><td>x = 10</td><td>Variable assignment</td><td>let x = 10;</td></tr>
+<tr><td>Constants</td><td>X = 10</td><td>Constants</td><td>const X = 10;</td></tr>
+</tbody></table>
+</div>
+<h3 id="4-conditionals"><a class="header" href="#4-conditionals">4. Conditionals</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>If-else</td><td>if x &gt; 0: print(&quot;Positive&quot;)</td><td>If-else</td><td>if (x &gt; 0) { console.log(&quot;Positive&quot;); }</td></tr>
+<tr><td></td><td>else: print(&quot;Non-positive&quot;)</td><td></td><td>else { console.log(&quot;Non-positive&quot;); }</td></tr>
+</tbody></table>
+</div>
+<h3 id="5-loops"><a class="header" href="#5-loops">5. Loops</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>For loop</td><td>for i in range(3): print(i)</td><td>For loop</td><td>for (let i = 0; i &lt; 3; i++) { console.log(i); }</td></tr>
+<tr><td>While loop</td><td>while x &gt; 0: x -= 1</td><td>While loop</td><td>while (x &gt; 0) { x--; }</td></tr>
+</tbody></table>
+</div>
+<h3 id="6-functions"><a class="header" href="#6-functions">6. Functions</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>Function definition</td><td>def func(): return &quot;Hello&quot;</td><td>Function definition</td><td>function func() { return &quot;Hello&quot;; }</td></tr>
+</tbody></table>
+</div>
+<h3 id="7-data-structures-array-objects"><a class="header" href="#7-data-structures-array-objects">7. Data structures (Array, objects)</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>List (Array)</td><td>my_list = [1, 2, 3]</td><td>Array</td><td>let myArray = [1, 2, 3];</td></tr>
+<tr><td>Dictionary (Object)</td><td>my_dict = {&quot;key&quot;: &quot;value&quot;}</td><td>Object</td><td>let myObject = {&quot;key&quot;: &quot;value&quot;};</td></tr>
+<tr><td>List of Dictionaries</td><td>my_list = [{&quot;key1&quot;: &quot;value1&quot;}, {&quot;key2&quot;: &quot;value2&quot;}]</td><td>Array of Objects</td><td>let myArray = [{&quot;key1&quot;: &quot;value1&quot;}, {&quot;key2&quot;: &quot;value2&quot;}];</td></tr>
+</tbody></table>
+</div>
+<h3 id="8-built-in-methods-for-strings"><a class="header" href="#8-built-in-methods-for-strings">8. Built-in methods for strings</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>String length</td><td>length = len(s)</td><td>String length</td><td>let length = s.length;</td></tr>
+<tr><td>String concatenation</td><td>combined = s1 + s2</td><td>String concatenation</td><td>let combined = s1 + s2;</td></tr>
+<tr><td>String find</td><td>index = s.find('llo')</td><td>String indexOf</td><td>let index = s.indexOf('llo');</td></tr>
+</tbody></table>
+</div>
+<h3 id="9-built-in-methods-for-arrays"><a class="header" href="#9-built-in-methods-for-arrays">9. Built-in methods for arrays</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Python Concept</th><th>Python Example</th><th>JavaScript Concept</th><th>JavaScript Example</th></tr></thead><tbody>
+<tr><td>Append to array</td><td>my_list.append(4)</td><td>Push to array</td><td>myArray.push(4);</td></tr>
+<tr><td>Remove from array</td><td>my_list.remove(2)</td><td>Splice from array</td><td>myArray.splice(myArray.indexOf(2), 1);</td></tr>
+<tr><td>Array length</td><td>length = len(my_list)</td><td>Array length</td><td>let length = myArray.length;</td></tr>
+<tr><td>Access array element</td><td>element = my_list[0]</td><td>Access array element</td><td>let element = myArray[0];</td></tr>
+<tr><td>Sort array</td><td>my_list.sort()</td><td>Sort array</td><td>myArray.sort();</td></tr>
+<tr><td>Reverse array</td><td>my_list.reverse()</td><td>Reverse array</td><td>myArray.reverse();</td></tr>
+</tbody></table>
+</div>
+<h2 id="topics-to-review"><a class="header" href="#topics-to-review">Topics to Review</a></h2>
+<ul>
+<li><a href="https://wf-2.vercel.app/web-foundations-july-2022/foundations/html-elements-and-attributes.html">HTML (Web Foundations)</a></li>
+<li><a href="https://wf-2.vercel.app/web-foundations-july-2022/foundations/css-selectors-and-properties.html">CSS  (Web Foundations)</a></li>
+<li><a href="https://pm-and-design.vercel.app/lessons/ui-design-basics/introduction-to-Figma.html">Figma (Project Management &amp; Design)</a></li>
+<li><a href="https://pm-and-design.vercel.app/lessons/ui-design-basics/basic-principles.html">UI Design (Project Management &amp; Design)</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../lessons/javascript-review.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../lessons/javascript-review/javascript-intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../lessons/javascript-review.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../lessons/javascript-review/javascript-intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
