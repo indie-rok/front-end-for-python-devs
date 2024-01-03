@@ -1,11 +1,6 @@
 [book]
-authors = ["Rob Cobb"]
+authors = ["Emmanuel Orozco"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Front End Web Development"
-
-[build]
-build-dir = "output"
-create-missing = true
-use-default-preprocessors = false
+title = "front-end-for-python-developers"

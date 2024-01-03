@@ -1,8 +1,8 @@
-# Front End Web Development
+# Front End Web for Python Developers
 
-- Course design plan: https://docs.google.com/document/d/12bjmNy7qyx9BYh7WYcKgVkpHMeRoT1kJrT2Uah808vE/edit
-- See course info: https://docs.google.com/document/d/1-xkpdJNIvzVTJnE-t3poEOEyxaTeaQvlJqTXbSFfRzs/edit#heading=h.xfofsp2yit4z
-- See info about Kibo's BSc. Computer Science: https://kibo.school/degree/
+This course is created to help you understand Python if you come from a Python background.
+
+We aim to teach the whole course in 10-weeks, but you can do the course at your own pace.
 
 ## What's here?
 
@@ -34,16 +34,6 @@ Config file for the course. Authors, title, other mdbook settings.
 
 https://rust-lang.github.io/mdBook/format/configuration/index.html
 
-### convert.rb
-
-If the course was built on Notion, you can convert it to an mdbook course.
-
-1. Download the notion export from your course
-2. Edit the constants to fit your course and set the notion export directory.
-3. Run `./convert.rb`
-
-Otherwise, you can remove this file.
-
 ### theme/
 
 Any overrides of the default mdbook theme. Right now, just some custom CSS on
@@ -68,7 +58,7 @@ https://rust-lang.github.io/mdBook/format/summary.html
 Anything that is _not_ linked in the sidebar will not be included in the output
 site.
 
-### src/*
+### src/\*
 
 Pages at the top level of the source folder are for overview information about the course. The template includes:
 
@@ -109,7 +99,7 @@ You can usually ignore these files, they aren't tracked in git.
 
 Install mdbook: https://rust-lang.github.io/mdBook/guide/installation.html
 
-Use your package manager: 
+Use your package manager:
 
 ```bash
 brew install mdbook
@@ -146,5 +136,5 @@ Vercel, assign a production domain, and set up auto-deploys.
 If you'd like to preview changes, push to `draft` branch, which will have a
 separate preview version of the site.
 
-Remember - commits to `main` get built and deployed to the production site; 
+Remember - commits to `main` get built and deployed to the production site;
 commits to `draft` get pushed to the preview version, others get nothing.
